@@ -19,29 +19,20 @@ const notificationRouter = require("./routes/NotificationRoute");
 
 const app = express();
 
-// Connect Database
+// Connect Database & Cloudinary
 connectDB();
 connectCloudinary();
 
 // Middlewares
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL,
+    origin: "*",
     credentials: true,
-    methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
-    allowedHeaders: [
-      "Content-Type",
-      "Authorization",
-      "token",
-      "aToken",
-      "iToken",
-    ],
   }),
 );
-
 app.use(express.json());
 
-// Routes
+// API Routes
 app.use("/api/user", userRouter);
 app.use("/api/instructor", instructorRouter);
 app.use("/api/course", courseRouter);
