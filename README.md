@@ -6,7 +6,7 @@ A modern Full Stack Learning Management System (LMS) built with React, Node.js, 
 
 ## 🚀 Live Demo
 
-https://YOUR-LIVE-DEMO.vercel.app/
+https://edu-hub-lms-7jkz.vercel.app/
 
 ---
 
